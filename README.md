@@ -110,6 +110,17 @@ shipexec-metrics/
   README.md
 ```
 
+## Building a Standalone Executable
+
+If you want to share this with someone who doesn't have Python installed, you can package it as a standalone `.exe`:
+
+```bash
+pip install pyinstaller
+pyinstaller --onefile metrics.py
+```
+
+The executable will be in the `dist/` folder. The user will still need Google Chrome installed and a ShipExec account, but they won't need Python or any dependencies.
+
 ## Security
 
 - **No credentials are stored in the code.** The browser launches and you log in manually.
