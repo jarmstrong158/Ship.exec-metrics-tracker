@@ -2,6 +2,20 @@
 
 Automated warehouse shipping report generator for [ShipExec](https://thinclient.shipexec.com). Scrapes History and Detailed Report tables via Selenium, then builds per-region Excel summaries with picked/packed counts, boxcounts, and staff breakdowns.
 
+## Business Impact
+
+Built for a warehouse operation processing 200+ daily orders across multiple regions and a team of 6 staff. Replaced a fully manual reporting process that required a manager to log into ShipExec, manually cross-reference two separate report tables, and build Excel summaries by hand each day.
+
+What this tool eliminated:
+
+- Manual daily data pulls from two separate ShipExec report views
+- Hand-calculation of per-staff picked/packed counts and boxcounts across 4 regional teams
+- The weekend/Monday reporting gap — a ShipExec limitation that previously caused 3 days of shipment data to collapse into a single undifferentiated report
+
+**Result:** Saves 4 staff members 1–1.5 hours of manual reporting work per day. At current compensation levels, that recovers approximately 1,300 labor hours and $35,000–$60,000 in annual labor value — from a tool with zero licensing cost.
+
+**Stack:** Python, Selenium, BeautifulSoup, pandas — no RPA platform license required.
+
 ## What It Does
 
 Each warehouse region (e.g. NE, SE, CTR, WC) has staff identified by initials in the Consignee Reference field. The script:
