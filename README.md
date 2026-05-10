@@ -1,6 +1,13 @@
 # ShipExec Metrics
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
+
 Automated warehouse shipping report generator for [ShipExec](https://thinclient.shipexec.com). Scrapes History and Detailed Report tables via Selenium, then builds per-region Excel summaries with picked/packed counts, boxcounts, and staff breakdowns.
+
+## Impact
+
+Saves roughly 25 labor hours per week across the warehouse team by replacing a manual daily reporting workflow that previously required cross-referencing two ShipExec tables and hand-building Excel summaries. The tool has been in continuous daily production use for over a year and adopted by other warehouse managers at the company beyond the original pilot region.
 
 ## Business Impact
 
@@ -48,8 +55,8 @@ This script solves that by running each day separately and subtracting prior day
 ## Setup
 
 ```bash
-git clone <this-repo>
-cd shipexec-metrics
+git clone https://github.com/jarmstrong158/Ship.exec-metrics-tracker.git
+cd Ship.exec-metrics-tracker
 pip install -r requirements.txt
 ```
 
@@ -116,7 +123,7 @@ Each workbook contains:
 ## Project Structure
 
 ```
-shipexec-metrics/
+Ship.exec-metrics-tracker/
   metrics.py            # The entire script
   requirements.txt      # Python dependencies
   metrics_config.json   # Auto-generated on first run (git-ignored)
